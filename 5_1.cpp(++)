@@ -1,0 +1,29 @@
+#include <iostream>
+
+int main(void)
+{
+    using namespace std;
+    
+    // get inputs
+    cout << "Enter 2 integers: ";
+	int input[2];
+    for(int i = 0; i < 2; ++i)
+        cin >> input[i];
+    int a = input[0];
+    int b = input[1];
+    long sum = 0;
+	int k=a;
+    
+    // sum
+	do
+	{
+	sum+=k;
+	}
+	while(++k<=b);
+
+    cout << "Sum: " << sum << endl;
+	cin.get();
+	cin.get();
+    
+    return 0;
+}
