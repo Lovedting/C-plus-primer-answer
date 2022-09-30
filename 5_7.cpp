@@ -1,13 +1,16 @@
 #include<iostream>
+#include<string>
 int main()
 {
 	using namespace std;
 	cout<<"How many cars do you wish to catalog?";
 	int catalog;
 	cin>>catalog;
+	cin.clear();
+	//&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&😊&&&&&&&&&&&&&&&&&&&&&important!
 	struct car
 	{
-		char *make;
+		string make;//✨✨✨✨✨✨✨✨✨✨
 		int year;
 	};
 	
@@ -18,18 +21,21 @@ int main()
 	
 	for(i=0;i<catalog;i++)
 	{
-		cout<<"Car #"<<i<<":\n"<<"Please enter the make:";
-		cin.getline((Car+i)->make,40);
+		cout<<"Car #"<<i+1<<":\n"<<"Please enter the make:";
+	
+		getline(cin,Car[i].make);
 		cout<<"\n"<<"Please enter the year made:";
-		cin>>(Car+i)->year;
+		cin>>Car[i].year;
+		cin.clear();
+		//!!!!!!😊
 	};
 	
 	
 	cout<<"Here is your collection:"<<"\n";
 	for(i=0;i<catalog;i++)
-		cout<<(Car+i)->year<<" "<<(Car+i)->make<<"\n";
+		cout<<Car[i].year<<" "<<Car[i].make<<"\n";
 	
-	delete []Car;
+	delete []Car;//✨✨✨✨✨✨✨✨✨
 	cin.get();
 	cin.get();
 	return 0;
